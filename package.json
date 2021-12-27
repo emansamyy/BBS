@@ -1,0 +1,25 @@
+{
+  "name": "blood_bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "cjs": "^0.0.11",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "flatted": "^3.2.4",
+    "mongoose": "^6.1.2",
+    "node": "^17.3.0",
+    "pusher": "^5.0.0",
+    "routes": "^2.1.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
