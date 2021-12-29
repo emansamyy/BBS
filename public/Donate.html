@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Donate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="Donate.CSS">
+    <link rel="stylesheet" href="home.css">
+    <script src="donate.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a class="active" href="home.html">Home</a></li>
+            <li><a href="Donate.html">Donate now!</a></li>
+            <li><a href="ViewDonations.html">View Donations</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li style="float:right"><a href="signup.html">Sign up</a></li>
+            <li style="float:right"><a class="active" href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+
+    <a href="contactus.html">
+        <button class="contact" type="button">Contact Us Now</button>
+    </a>
+    </div>
+
+    <p class="formname">Reserve Ticket</p>
+    <div class="booking-from-box">
+        <div class="radio-btn">
+            <input  type="radio" class="btn" name="check" checked="checked"><span> Round trip</span>
+            <input  type="radio" class="btn" name="check"><span>One way</span>
+            <input type="radio" class="btn" name="check"><span>Multi-City</span>
+        </div>
+
+
+        <div class="booking-form">
+            <label>From </label>
+            <input type="text" id ="source" placeholder="Source"><br>
+            <label>To </label>
+            <input type="text" id = "Destination" placeholder="Destination">
+
+            <div class="input-grp">
+                <label>Date</label>
+                <input id ="date" type="Date">
+            </div>
+            <div class="input-grp">
+                <label>Adults</label>
+                <input  type="number" value="1">
+            </div>
+            <div class="input-grp">
+                <label>Children</label>
+                <input  type="number" value="0">
+            </div>
+            <div class="input-grp">
+                <label>Travel Class</label>
+                <select class="Custom-select"> 
+                <option  value="1">First Class</option>
+                <option value="2">Second Class</option>
+            </select>
+            </div>
+            <button type="button" class="Reserve" onclick="validate()"> Reserve Ticket</button>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+<footer>
+    <div class="footer-basic">
+        <footer>
+            <hr><br>
+            <div class="social">
+                <a href="https://www.instagram.com" target="_blank"><i class="icon ion-social-instagram" ></i></a>
+                <a href="https://www.snapchat.com" target="_blank"><i class="icon ion-social-snapchat"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="home.html">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <br>
+            <p class="copyright">System name © 2021</p>
+        </footer>
+    </div>
+
+</footer>
+
+
+
+</html>

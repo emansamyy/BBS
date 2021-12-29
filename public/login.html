@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Log in</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.3-web\css\all.css">
+</head>
+
+<body class="parent">
+    <div class="div1"> background here</div>
+    <header class="div2"> </header>
+    <div class="div3" id="nav"> <a href="home.html">Home</a></div>
+ 
+    <div class="div6" id="nav"> <a href="contactus.html"> Contact Us</a></div>
+    <div class="div7" id="nav"> <a href="login.html"> login</a> </div>
+    <a href="contactus.html">
+        <button class="contact" type="button">Contact Us Now</button>
+    </a>
+    <div class="div8">
+        <div class="contrainer" id="oneone">
+            <div class="header">
+                <h2>Log in! </h2>
+            </div>
+            <form id="form" class="form">
+                <div class="form-controll">
+                    <lable for="username">Email</lable>
+                    <input type="email" placeholder="abc@gmail.com" id="email" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    
+                    <small>Error Message</small>
+                </div>
+
+                <div class="form-controll">
+                    <lable for="username">Password</lable>
+                    <input type="password" placeholder="pwpw123" id="password" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                </div>
+                <input type="radio" id="admin" name="LoginAs" value="admin">
+                    <label for="admin">Admin</label>
+                    <input type="radio" id="donor" name="LoginAs" value="donor">
+                    <label for="donor">Donor</label>
+                    <input type="radio" id="distributer" name="LoginAs" value="distributer">
+                    <label for="distributer">Distributer</label>
+                    <input type="radio" id="collector" name="LoginAs" value="collector">
+                    <label for="collector">Collector</label> <br> <br>
+                <button type="submit" onclick= "redirectBasedRole()"> Log in!</button>
+                <p><a href="signup.html">Don't have an accout,Create one!</a></p>
+        </div>
+
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    <div class="div9">
+        <div class="footer-basic">
+            <footer>
+                <br>
+                <div class="social">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.snapchat.com" target="_blank"><i class="fab fa-snapchat"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="home.html">Home</a></li>
+                    <li class="list-inline-item"><a href="#">Services</a></li>
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+                <br>
+                <p class="copyright">Metro Exodus Inc. ©️ 2021</p>
+            </footer>
+        </div>
+
+    </div>
+    <script src="login.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+</body>

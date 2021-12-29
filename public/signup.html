@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Sign up</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="fontawesome-free-5.15.3-web\css\all.css"
+  />
+</head>
+
+<body class="parent">
+  <div class="div1">background here</div>
+  <header class="div2"></header>
+  <div class="div3" id="nav"><a href="home.html"></a></div>
+  <div class="div4" id="nav"><a href="Donate.html"> Donate now!</a></div>
+  <div class="div5" id="nav">
+    <a href="ViewDonations.html">View Donations</a>
+  </div>
+  <div class="div6" id="nav"><a href="contactus.html"> Contact Us</a></div>
+  <div class="div7" id="nav"><a href="login.html"> login</a></div>
+  <div class="div8">
+    <div class="contrainer" id="one">
+      <div class="header">
+        <h2>Create account</h2>
+      </div>
+      <form id="form" class="form" action="connect.php" method="POST">
+        <div class="form-controll">
+          <lable for="username">Username</lable>
+          <input
+            type="text"
+            placeholder="username"
+            id="username"
+            name="username"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-controll" id="two">
+          <lable for="username">Email</lable>
+          <input
+            type="email"
+            placeholder="abc@gmail.com"
+            id="email"
+            name="email"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-controll" id="three">
+          <lable for="username">Password</lable>
+          <input
+            type="password"
+            placeholder="Enter you password here"
+            id="password"
+            name="password"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+
+        <div class="form-controll" id="four">
+          <lable for="username">Verify password</lable>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <input
+            type="password"
+            placeholder="Enter Password again"
+            id="password2"
+          />
+          <small>Error Message</small>
+        </div>
+        <button type="submit">Sign up!</button>
+        <p><a href="login.html">Already have an account?Login.</a></p>
+      </form>
+    </div>
+  </div>
+  <div class="div9">
+    <div class="footer-basic">
+      <footer>
+        <br />
+        <div class="social">
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.snapchat.com" target="_blank"
+            ><i class="fab fa-snapchat"></i
+          ></a>
+          <a href="https://www.twitter.com/" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="home.html">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <br />
+        <p class="copyright">Metro Exodus Inc. © 2021</p>
+      </footer>
+    </div>
+  </div>
+  <script src="signup.js"></script>
+  <script src="jquery-3.6.0.js"></script>
+</body>
