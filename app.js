@@ -1,19 +1,22 @@
+
+// eman188849
 const express = require("express");
 const mongoose = require("mongoose");
-require('./models/db')
-require('dotenv/config');
+require('./models/db');
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config({path: './config/config.env'});
 const cors = require('cors');
-const bodyParser= require('body-parser')
+const bodyParser= require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
-// const users =  User.find({})
 app.use(express.json());
 app.use(cors());
 
 const routes = require('./routes/userroutes');
 
 mongoose.connect(
-  'mongodb+srv://emem:1234@cluster0.iarne.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+ process.env.connectionString,
   {
     useNewUrlParser: true,
     
@@ -26,18 +29,20 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
-           
+  //  eman188849        
 
 app.get('/' , (req,res) =>{
 res.sendFile(__dirname + '/public/home.html')
 
 })
 app.use(express.static('public'));
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server is running at port 5000");
 });
-
+// eman188849
 app.use('/', routes);
 app.use('/adduser', routes);
+app.use('/deleteuser' , routes);
+app.use('/updateuser' , routes);
 
 
