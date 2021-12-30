@@ -21,10 +21,10 @@
             <div class="header">
                 <h2>Log in! </h2>
             </div>
-            <form id="form" class="form">
+            <form method="post" action = "/checkuser" id="form" class="form">
                 <div class="form-controll">
                     <lable for="username">Email</lable>
-                    <input type="email" placeholder="abc@gmail.com" id="email" />
+                    <input type="email" placeholder="abc@gmail.com" id="email" name="logemail" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     
@@ -38,20 +38,14 @@
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error Message</small>
                 </div>
-                <input type="radio" id="admin" name="LoginAs" value="admin">
-                    <label for="admin">Admin</label>
-                    <input type="radio" id="donor" name="LoginAs" value="donor">
-                    <label for="donor">Donor</label>
-                    <input type="radio" id="distributer" name="LoginAs" value="distributer">
-                    <label for="distributer">Distributer</label>
-                    <input type="radio" id="collector" name="LoginAs" value="collector">
-                    <label for="collector">Collector</label> <br> <br>
-                <button type="submit" onclick= "redirectBasedRole()"> Log in!</button>
+            
+                <button type="submit"> Log in!</button>
                 <p><a href="signup.html">Don't have an accout,Create one!</a></p>
+            </form>
         </div>
 
     </div>
-    </form>
+  
     </div>
     </div>
     </div>

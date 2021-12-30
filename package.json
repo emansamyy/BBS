@@ -22,7 +22,8 @@
     "node": "^17.3.0",
     "override": "^0.0.1",
     "pusher": "^5.0.0",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
+    "sudo": "^1.0.3"
   },
   "keywords": [],
   "author": "",

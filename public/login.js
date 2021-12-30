@@ -61,20 +61,3 @@ check mail regex(regular expressions)
 https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 */
 
-function redirectBasedRole(){
-    if(document.getElementById('admin').checked == true) {   
-        window.location.href = "adminhome.html";
-}
- else if ( document.getElementById('donor').checked == true) {  
-    window.location.href = "donorhome.html";
-}  
-else if ( document.getElementById('distributer').checked == true) {  
-    window.location.href = "distributerhome.html";
-}  
-else {
-
-    window.location.href = "collectorhome.html";
-}
-
-    
-}
