@@ -1,9 +1,8 @@
-// eman188849
-
+const e = require("express");
 const Path = require("path");
 const users = require("../models/db");
 
-const createUser = (req, res) => {
+const addUser = (req, res) => {
   var user = new users({
     UserID: req.body.iidd,
     UserFirstName: req.body.unamm,

@@ -9,14 +9,10 @@ const {
 
 } = require ('../controllers/ManageUsers')
 
-router.post("/adduser", createUser);
-router.post("/deleteuser:UserID", deleteUser);
-router.delete("/deleteuser:UserID", deleteUser);
-
-// router.('/:UserID', updateUser)
-
+router.post('/adduser',     addUser);
 
 router.post('/checkuser',     checkuser);
 
+router.post('/signup',     signup);
 
-module.exports = router;
+module.exports = router
