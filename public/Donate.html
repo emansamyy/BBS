@@ -1,97 +1,146 @@
-<html>
+<!DOCTYPE html>
 
 <head>
-    <title>Donate</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="Donate.CSS">
-    <link rel="stylesheet" href="home.css">
-    <script src="donate.js"></script>
+  <title>Donate Now!</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="fontawesome-free-5.15.3-web\css\all.css"
+  />
+  
 </head>
 
-<body>
-    <div class="nav">
-        <ul>
-            <li><a class="active" href="home.html">Home</a></li>
-            <li><a href="Donate.html">Donate now!</a></li>
-            <li><a href="ViewDonations.html">View Donations</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li style="float:right"><a href="signup.html">Sign up</a></li>
-            <li style="float:right"><a class="active" href="login.html">Login</a></li>
-        </ul>
-    </div>
+<body class="parent">
+  <div class="div1">background here</div>
+  <header class="div2"></header>
+  <div class="div3" id="nav"><a href="home.html"></a></div>
+  <div class="div4" id="nav"><a href="Donate.html"> Donate now!</a></div>
+  <div class="div5" id="nav">
+    <a href="ViewDonations.html">View Donations</a>
+  </div>
+  <div class="div6" id="nav"><a href="contactus.html"> Contact Us</a></div>
+  <div class="div7" id="nav"><a href="login.html"> login</a></div>
+  <div class="div8">
+    <div class="contrainer" id="one">
+      <div class="header">
+        <h2>Donation Form</h2>
+      </div>
 
-
-    <a href="contactus.html">
-        <button class="contact" type="button">Contact Us Now</button>
-    </a>
-    </div>
-
-    <p class="formname">Reserve Ticket</p>
-    <div class="booking-from-box">
-        <div class="radio-btn">
-            <input  type="radio" class="btn" name="check" checked="checked"><span> Round trip</span>
-            <input  type="radio" class="btn" name="check"><span>One way</span>
-            <input type="radio" class="btn" name="check"><span>Multi-City</span>
+      <form id="form" class="form" method="POST" action="/addDonation">
+        <div class="form-controll">
+          <lable>Full Name</lable>
+          <input
+            type="text"
+            placeholder="Full name as shown in the natinal ID"
+            id="fname"
+            name="fname"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
         </div>
 
-
-        <div class="booking-form">
-            <label>From </label>
-            <input type="text" id ="source" placeholder="Source"><br>
-            <label>To </label>
-            <input type="text" id = "Destination" placeholder="Destination">
-
-            <div class="input-grp">
-                <label>Date</label>
-                <input id ="date" type="Date">
-            </div>
-            <div class="input-grp">
-                <label>Adults</label>
-                <input  type="number" value="1">
-            </div>
-            <div class="input-grp">
-                <label>Children</label>
-                <input  type="number" value="0">
-            </div>
-            <div class="input-grp">
-                <label>Travel Class</label>
-                <select class="Custom-select"> 
-                <option  value="1">First Class</option>
-                <option value="2">Second Class</option>
-            </select>
-            </div>
-            <button type="button" class="Reserve" onclick="validate()"> Reserve Ticket</button>
+        <div class="form-controll" id="two">
+          <lable>Social Security Number</lable>
+          <input
+            type="number"
+            placeholder="Enter a valid ID"
+            id="SSIDx"
+            name="SSIDx"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
         </div>
+
+        <div class="form-controll" id="two">
+          <lable>Weight</lable>
+          <input
+            type="number"
+            placeholder="Weight at the time of donation"
+            id="Weightx"
+            name="Weightx"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-controll" id="two">
+          <lable for="username">Email</lable>
+          <input
+            type="email"
+            placeholder="abc@gmail.com"
+            id="email"
+            name="email"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <div class="form-controll">
+          <label>Blood Type</label>
+          <select class="Custom-select">
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="4">AB</option>
+            <option value="4">O</option>
+          </select>
+        </div>
+        <div class="form-controll">
+          <label>Donation Location</label>
+          <select class="Custom-select">
+            <option value="1">Madinaty</option>
+            <option value="2">Rehab</option>
+            <option value="4">Naser City</option>
+            <option value="4">Masr el-gedida</option>
+          </select>
+        </div>
+        <div class="form-controll">
+          <label>Gender</label>
+          <select class="Custom-select">
+            <option value="1">Male</option>
+            <option value="2">femle</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit!</button>
+        
+      </form>
     </div>
-    </div>
+  </div>
 
-
-</body>
-
-<footer>
+  <div class="div9">
     <div class="footer-basic">
-        <footer>
-            <hr><br>
-            <div class="social">
-                <a href="https://www.instagram.com" target="_blank"><i class="icon ion-social-instagram" ></i></a>
-                <a href="https://www.snapchat.com" target="_blank"><i class="icon ion-social-snapchat"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a>
-                <a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a>
-            </div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="home.html">Home</a></li>
-                <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-            </ul>
-            <br>
-            <p class="copyright">System name © 2021</p>
-        </footer>
+      <footer>
+        <br />
+        <div class="social">
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.snapchat.com" target="_blank"
+            ><i class="fab fa-snapchat"></i
+          ></a>
+          <a href="https://www.twitter.com/" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="home.html">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <br />
+        <p class="copyright">Metro Exodus Inc. © 2021</p>
+      </footer>
     </div>
-
-</footer>
-
-
-
-</html>
+  </div>
+  <script src = "../controllers/Managedonation.js"></script>
+  <script src="donate.js"></script>
+  <script src="jquery-3.6.0.js"></script>
+</body>
