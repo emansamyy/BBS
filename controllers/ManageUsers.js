@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 // eman188849
 
 const Path = require("path");
 const users = require("../models/db");
 
 const createUser = (req, res) => {
-=======
-const e = require("express");
-const Path = require("path");
-const users = require("../models/db");
-
-const addUser = (req, res) => {
->>>>>>> f873c8018effb086c9339e3163eb723ddf219948
   var user = new users({
     UserID: req.body.iidd,
     UserFirstName: req.body.unamm,
@@ -26,37 +18,6 @@ const addUser = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-<<<<<<< HEAD
-        message:
-          err.message || "Some error occurred while creating the accoount.",
-      });
-    });
-};
-
-const updateUser = (req, res) => {
-  const id = Number(req.params.UserID);
-  const index = users.findIndex((user) => user.id === id);
-  const updatedUser = {
-    id: users[index].id,
-    name: req.body.name,
-  };
-
-  users[index] = updatedUser;
-  res.status(200).json("User updated");
-};
-
-const deleteUser = (req, res) => {
-  const id = Number(req.params.UserID);
-  const index = users.findIndex((user) => user.id === id);
-  users.splice(index, 1);
-  res.status(200).json("User deleted");
-};
-
-module.exports = {
-  createUser,
-  updateUser,
-  deleteUser,
-=======
         message: err.message || "Some error occurred while creating the User.",
       });
     });
@@ -114,5 +75,4 @@ module.exports = {
   checkuser,
  signup
   
->>>>>>> f873c8018effb086c9339e3163eb723ddf219948
 };
