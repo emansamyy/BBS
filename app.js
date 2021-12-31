@@ -1,5 +1,3 @@
-
-// eman188849
 const express = require("express");
 const mongoose = require("mongoose");
 require('./models/db');
@@ -19,7 +17,7 @@ mongoose.connect(
  process.env.connectionString,
   {
     useNewUrlParser: true,
-    
+   
     useUnifiedTopology: true
   }
 );
@@ -31,24 +29,17 @@ db.once("open", function () {
 
   //  eman188849        
 
- app.get('/' , (req,res) =>{ 
-   res.sendFile(__dirname + '/public/home.html')
+app.get('/' , (req,res) =>{
+res.sendFile(__dirname + '/public/home.html')
 
- })
+})
 app.use(express.static('public'));
 app.listen(process.env.PORT, () => {
   console.log("Server is running at port 5000");
 });
-
-app.set("view engine", "ejs");
-app.get("/", async (req, res) => {
-  const users = await User.find({});
-  res.render("index", {users});
-});
 // eman188849
 
+app.use("/" , routes);
 app.use('/adduser', routes);
-// app.use('/deleteuser:UserID' , routes);
-// app.use('/updateuser' , routes);
 app.use('/checkuser' , routes);
-
+app.use('/signup' , routes);
