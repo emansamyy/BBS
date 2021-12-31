@@ -8,6 +8,7 @@
     type="text/css"
     href="fontawesome-free-5.15.3-web\css\all.css"
   />
+  <script src = "../controllers/ManageUsers.js"></script>
 </head>
 
 <body class="parent">
@@ -25,14 +26,14 @@
       <div class="header">
         <h2>Create account</h2>
       </div>
-      <form id="form" class="form" action="connect.php" method="POST">
+      <form id="form" class="form" action="/signup" method="POST">
         <div class="form-controll">
           <lable for="username">Username</lable>
           <input
             type="text"
             placeholder="username"
             id="username"
-            name="username"
+            name="usernameup"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
@@ -44,7 +45,7 @@
             type="email"
             placeholder="abc@gmail.com"
             id="email"
-            name="email"
+            name="emailup"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
@@ -56,7 +57,7 @@
             type="password"
             placeholder="Enter you password here"
             id="password"
-            name="password"
+            name="passwordup"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
@@ -71,6 +72,7 @@
             type="password"
             placeholder="Enter Password again"
             id="password2"
+            name="passwordup2"
           />
           <small>Error Message</small>
         </div>

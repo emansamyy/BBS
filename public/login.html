@@ -4,6 +4,7 @@
     <title>Log in</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.3-web\css\all.css">
+    <script src = "../controllers/ManageUsers.js"></script>
 </head>
 
 <body class="parent">
@@ -12,7 +13,7 @@
     <div class="div3" id="nav"> <a href="home.html">Home</a></div>
  
     <div class="div6" id="nav"> <a href="contactus.html"> Contact Us</a></div>
-    <div class="div7" id="nav"> <a href="login.html"> login</a> </div>
+   
     <a href="contactus.html">
         <button class="contact" type="button">Contact Us Now</button>
     </a>
@@ -21,10 +22,11 @@
             <div class="header">
                 <h2>Log in! </h2>
             </div>
-            <form id="form" class="form">
+            <form method="post" action = "/checkuser" id="form" class="form">
                 <div class="form-controll">
                     <lable for="username">Email</lable>
-                    <input type="email" placeholder="abc@gmail.com" id="email" />
+                   
+                    <input type="text"id="logemail" name="logemail" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     
@@ -33,25 +35,19 @@
 
                 <div class="form-controll">
                     <lable for="username">Password</lable>
-                    <input type="password" placeholder="pwpw123" id="password" />
+                    <input type="password"  id="passwordd" name="passwordd" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error Message</small>
                 </div>
-                <input type="radio" id="admin" name="LoginAs" value="admin">
-                    <label for="admin">Admin</label>
-                    <input type="radio" id="donor" name="LoginAs" value="donor">
-                    <label for="donor">Donor</label>
-                    <input type="radio" id="distributer" name="LoginAs" value="distributer">
-                    <label for="distributer">Distributer</label>
-                    <input type="radio" id="collector" name="LoginAs" value="collector">
-                    <label for="collector">Collector</label> <br> <br>
-                <button type="submit" onclick= "redirectBasedRole()"> Log in!</button>
+            
+                <button type="submit"> Log in!</button>
                 <p><a href="signup.html">Don't have an accout,Create one!</a></p>
+            </form>
         </div>
 
     </div>
-    </form>
+  
     </div>
     </div>
     </div>
@@ -78,6 +74,6 @@
         </div>
 
     </div>
-    <script src="login.js"></script>
+    <!-- <script src="login.js"></script> -->
     <script src="jquery-3.6.0.js"></script>
 </body>

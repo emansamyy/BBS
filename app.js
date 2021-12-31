@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // eman188849
+=======
+>>>>>>> f873c8018effb086c9339e3163eb723ddf219948
 const express = require("express");
 const mongoose = require("mongoose");
 require("./models/db");
@@ -17,8 +20,19 @@ const routes = require("./routes/userroutes");
 mongoose.connect(process.env.connectionString, {
   useNewUrlParser: true,
 
+<<<<<<< HEAD
   useUnifiedTopology: true,
 });
+=======
+mongoose.connect(
+ process.env.connectionString,
+  {
+    useNewUrlParser: true,
+   
+    useUnifiedTopology: true
+  }
+);
+>>>>>>> f873c8018effb086c9339e3163eb723ddf219948
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
@@ -35,6 +49,7 @@ app.listen(process.env.PORT, () => {
   console.log("Server is running at port 5500");
 });
 // eman188849
+<<<<<<< HEAD
 app.use("/", routes);
 app.use("/adduser", routes);
 app.use("/deleteuser", routes);
@@ -45,3 +60,10 @@ app.use("/updateuser", routes);
 
 app.use("/", routes);
 app.use("/addDonation", routes);
+=======
+
+app.use("/" , routes);
+app.use('/adduser', routes);
+app.use('/checkuser' , routes);
+app.use('/signup' , routes);
+>>>>>>> f873c8018effb086c9339e3163eb723ddf219948

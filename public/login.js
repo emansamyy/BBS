@@ -5,21 +5,19 @@ this.flag2 = true;
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     checkinput();
-    if (this.flag2) {
-        $(document).ready(function () {
-            $("#oneone").fadeOut();
-            $("#twotwo").fadeOut("3000");
-            var delayInMilliseconds = 500;
+    // if (this.flag2) {
+    //     $(document).ready(function () {
+    //         $("#oneone").fadeOut();
+    //         $("#twotwo").fadeOut("3000");
+    //         var delayInMilliseconds = 500;
 
-            setTimeout(function () {
-                window.location.href = 'home.html';
-            }, delayInMilliseconds);
+           
 
-        });
-    }
-    else {
-        this.flag2 = true;
-    }
+    //     });
+    // }
+    // else {
+    //     this.flag2 = true;
+    // }
 });
 
 function checkinput() {
@@ -61,20 +59,3 @@ check mail regex(regular expressions)
 https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 */
 
-function redirectBasedRole(){
-    if(document.getElementById('admin').checked == true) {   
-        window.location.href = "adminhome.html";
-}
- else if ( document.getElementById('donor').checked == true) {  
-    window.location.href = "donorhome.html";
-}  
-else if ( document.getElementById('distributer').checked == true) {  
-    window.location.href = "distributerhome.html";
-}  
-else {
-
-    window.location.href = "collectorhome.html";
-}
-
-    
-}
