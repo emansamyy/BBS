@@ -1,3 +1,4 @@
+var tableBuilt = false;
 function addAttributes(array) {
     buildTable(array);
 }
@@ -65,10 +66,16 @@ function buildTable(arr) {
                 );
         });
     });
+
+    tableBuilt = true;
 }
 
 function showRequestsTable() {
-    addAttributes(requestsList);
+    if(tableBuilt){
+        //do nothing
+    } else {
+        addAttributes(requestsList);
+    }
     var display = document.getElementById("usersTable").style.display;
     if (display != "table") {
         document.getElementById("usersTable").style.display = "table";
@@ -77,42 +84,7 @@ function showRequestsTable() {
     }
 }
 
-function buildModal(id) {
-    modalID = id;
-    if (modalID != null) {
-        document.getElementById("modalTitle").innerHTML = "Edit User";
-        document.getElementById("modalDeleteBtn").style.display = "inline";
-        document.getElementById("modalUpdateBtn").style.display = "inline";
-        document.getElementById("modalAddBtn").style.display = "none";
-
-        allUsers.forEach(function (user) {
-            if (user.ID == modalID) {
-                document.getElementById("idMA").value = user.ID;
-                document.getElementById("usernameMA").value = user.username;
-                document.getElementById("passwordMA").value = user.password;
-                document.getElementById("emailMA").value = user.email;
-                document.getElementById("roleMA").value = user.role;
-            }
-        });
-    } else {
-        document.getElementById("modalTitle").innerHTML = "Add User";
-        document.getElementById("modalDeleteBtn").style.display = "none";
-        document.getElementById("modalUpdateBtn").style.display = "none";
-        document.getElementById("modalAddBtn").style.display = "inline";
-
-        document.getElementById("idMA").value = "";
-        document.getElementById("usernameMA").value = "";
-        document.getElementById("passwordMA").value = "";
-        document.getElementById("emailMA").value = "";
-        document.getElementById("roleMA").value = "user";
-    }
-}
 
 function modalAdd() {
-    //buildModal();
     document.getElementById("id01").style.display = "block";
 }
-
-$(function () {
-    $("#includedContent").load("addDonationModal.html");
-});

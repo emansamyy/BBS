@@ -1,7 +1,7 @@
 <div id="id01" class="modal-MA">
     <span onclick="document.getElementById('id01').style.display='none'" class="close-Modal"
         title="Close Modal">&times;</span>
-    <form class="modal-content" method="post" action="/collectors">
+    <form class="modal-content" method="POST" action="/add-donation">
         <div class="container">
             <h1 id="modalTitle"></h1>
 
@@ -9,14 +9,14 @@
 
             <label for="bloodType">Blood Type</label>
             <select id="bloodTypeMA" name="bloodType" required>
-                <option value="APositive">A+</option>
-                <option value="ANegative">A-</option>
-                <option value="BPositive">B+</option>
-                <option value="BNegative">B-</option>
-                <option value="ABPositive">AB+</option>
-                <option value="ABNegative">AB-</option>
-                <option value="OPositive">O+</option>
-                <option value="ONegative">O-</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
             </select>
 
             <label for="quantity">Quantity</label>

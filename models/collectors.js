@@ -14,6 +14,10 @@ const requestsSchema = new Schema({
         type: Number,
         require: true,
     },
+    gender: {
+        type: String,
+        require: true,
+    },
     bloodType: {
         type: String,
         require: true,
@@ -51,10 +55,9 @@ const donationSchema = new Schema({
     },
 });
 
-
-const Requests = mongoose.model('donorsforms', requestsSchema);
-const Donations = mongoose.model('donations', donationSchema);
+const Requests = mongoose.model("donorsforms", requestsSchema);
+const Donations = mongoose.model("donations", donationSchema);
 module.exports = {
     Requests,
-     Donations
+    Donations,
 };

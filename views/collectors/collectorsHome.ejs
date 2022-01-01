@@ -41,7 +41,8 @@
         <script>
             var requestsList = <%- JSON.stringify(requests) %>  
         </script>
-        <div id="includedContent"></div>
+
+        <%-include('../partials/addDonationModal.ejs')%>
 
         <table id="usersTable" class="table-MA">
             <thead>
@@ -49,6 +50,7 @@
                     <th>Form ID</th>
                     <th>Name</th>
                     <th>Age</th>
+                    <th>Gender</th>
                     <th>Blood Type</th>
                     <th>Email Address</th>
                     <th>Weight</th>
