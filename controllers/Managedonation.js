@@ -1,33 +1,35 @@
-//omar187452
-const path = require("path");
-const donation  = require("../models/db");
+const e = require("express");
+const donation = require("../models/db");
+const Requests = require("../models/donorForm");
 
-const createDonation = (req, res) => {
-  if (!req.body) {
-    res.status(400).send({ message: "cannot be empty" });
-  }
-  var donationx = new donation({
-    UserFullName: req.body.Fname,
+const sendDonation = (req, res) => {
+  res.render("donate");
+};
+function addform(req, res) {
+  console.log(req.body);
+  const request = new Requests({
+    formID: 1,
+    name: req.body.fname,
+    SSID: req.body.SSIDx,
     age: req.body.age,
-    nationalId: req.body.nationalId,
-    weight: req.body.weight,
-    date: req.body.date,
-    BloodType: req.body.bloodTypye,
-    Gender: req.body.Gender,
+    bloodType: req.body.bloodtype,
+    emailAddress: req.body.email,
+    weight: req.body.weightx,
+    phoneNumber: req.body.pnumber,
+    gender: req.body.gender,
   });
 
-  donationx
-    .save(donationx)
-    .then((data) => {
-      res.send(data);
+  request
+    .save()
+    .then((result) => {
+      res.send(result);
     })
     .catch((err) => {
-      res.status(500).send({
-        message: err.message || "error.",
-      });
+      console.log(err);
     });
-};
+}
 
 module.exports = {
-  createDonation:createDonation
+  addform,
+  sendDonation,
 };

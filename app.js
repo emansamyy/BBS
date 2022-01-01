@@ -10,8 +10,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cors());
+app.set('view engine', 'ejs');
 
 const routes = require('./routes/userroutes');
+const oroutes=require('./routes/donationRoutes');
+
 
 mongoose.connect(
  process.env.connectionString,
@@ -43,3 +46,20 @@ app.use("/" , routes);
 app.use('/adduser', routes);
 app.use('/checkuser' , routes);
 app.use('/signup' , routes);
+app.use('/deleteuser' , routes);
+
+app.get("/users" ,routes);
+//app.set('view engine' , 'ejs');
+
+//omar187463
+
+//app.use("/donation" , oroutes);
+app.use(express.urlencoded({extended:true}));
+const donationRouter = require('./routes/donationRoutes');
+app.use(donationRouter);
+app.post('donor',(req,res)=>{
+  console.log(req.body);
+})
+
+
+

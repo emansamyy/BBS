@@ -26,7 +26,7 @@
         <h2>Donation Form</h2>
       </div>
 
-      <form id="form" class="form" method="POST" action="/addDonation">
+      <form id="form" class="form" method="POST" action="/add-form">
         <div class="form-controll">
           <lable>Full Name</lable>
           <input
@@ -58,13 +58,27 @@
           <input
             type="number"
             placeholder="Weight at the time of donation"
-            id="Weightx"
-            name="Weightx"
+            id="weightx"
+            name="weightx"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
           <small>Error Message</small>
         </div>
+
+        <div class="form-controll" id="two">
+          <lable>Phone Number</lable>
+          <input
+            type="number"
+            placeholder="Enter your phone number"
+            id="pnumber"
+            name="pnumber"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+
         <div class="form-controll" id="two">
           <lable for="username">Email</lable>
           <input
@@ -79,27 +93,27 @@
         </div>
         <div class="form-controll">
           <label>Blood Type</label>
-          <select class="Custom-select">
-            <option value="1">A</option>
-            <option value="2">B</option>
-            <option value="4">AB</option>
-            <option value="4">O</option>
+          <select class="Custom-select" name='bloodtype'>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+            <option value="O">O</option>
           </select>
         </div>
         <div class="form-controll">
           <label>Donation Location</label>
-          <select class="Custom-select">
-            <option value="1">Madinaty</option>
-            <option value="2">Rehab</option>
-            <option value="4">Naser City</option>
-            <option value="4">Masr el-gedida</option>
+          <select class="Custom-select" name='location'>
+            <option value="Madinaty">Madinaty</option>
+            <option value="Rehab">Rehab</option>
+            <option value="Naser City">Naser City</option>
+            <option value="Masr el-gedida">Masr el-gedida</option>
           </select>
         </div>
         <div class="form-controll">
           <label>Gender</label>
-          <select class="Custom-select">
-            <option value="1">Male</option>
-            <option value="2">femle</option>
+          <select class="Custom-select" name='Gender'>
+            <option value="Male">Male</option>
+            <option value="Female">femle</option>
           </select>
         </div>
 
@@ -139,6 +153,6 @@
     </div>
   </div>
   <script src="../controllers/Managedonation.js"></script>
- /<script src="donate.js"></script>
+
   <script src="jquery-3.6.0.js"></script>
 </body>
