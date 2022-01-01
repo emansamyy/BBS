@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 const routes = require('./routes/userroutes');
-
+const collectorsRoutes = require('./routes/collectorsRoutes');
 mongoose.connect(
  process.env.connectionString,
   {
@@ -33,11 +33,11 @@ db.once("open", function () {
 });
 
   //  eman188849
-
 app.get('/' , (req,res) =>{
 res.sendFile(__dirname + '/public/home.html')
 
 })
+
 app.use(express.static('public'));
 app.listen(process.env.PORT, () => {
   console.log("Server is running at port 5000");
@@ -48,3 +48,7 @@ app.use("/" , routes);
 app.use('/adduser', routes);
 app.use('/checkuser' , routes);
 app.use('/signup' , routes);
+
+
+// collectors routes
+app.use(collectorsRoutes);

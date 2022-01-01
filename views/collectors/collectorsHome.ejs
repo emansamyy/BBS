@@ -12,10 +12,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="../collectors/collectorsHome.js"></script>
 
+
 </head>
 
 <body>
-
     <div class="nav">
         <ul>
             <li><a href="../contactus.html">Contact Us</a></li>
@@ -38,6 +38,9 @@
     </div>
     <div class="middle">
 
+        <script>
+            var requestsList = <%- JSON.stringify(requests) %>  
+        </script>
         <div id="includedContent"></div>
 
         <table id="usersTable" class="table-MA">
@@ -46,9 +49,9 @@
                     <th>Form ID</th>
                     <th>Name</th>
                     <th>Age</th>
-                    <th>Weight</th>
                     <th>Blood Type</th>
                     <th>Email Address</th>
+                    <th>Weight</th>
                     <th>Phone Number</th>
                 </tr>
             </thead>
