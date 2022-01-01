@@ -1,13 +1,13 @@
 const e = require("express");
 const donation = require("../models/db");
-const Requests = require("../models/donorForm");
+const Request = require("../models/collectors");
 
 const sendDonation = (req, res) => {
   res.render("donate");
 };
 function addform(req, res) {
   console.log(req.body);
-  const request = new Requests({
+  const request = new Request.Requests({
     formID: 1,
     name: req.body.fname,
     SSID: req.body.SSIDx,
