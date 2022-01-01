@@ -59,3 +59,6 @@ app.get("/users" ,routes);
 
 // collectors routes
 app.use(collectorsRoutes);
+// distributer routes
+const distributerRoutes = require('./routes/distributerRouter');
+app.use(distributerRoutes);

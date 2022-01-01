@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <title>
     </title>
-    <link rel="stylesheet" href="home.css">
+    
+    <link rel="stylesheet" href="../home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <script defer src="counter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="../distributer/distributerHome.js"></script>
 
 </head>
 
@@ -31,39 +33,15 @@
     <div class="hero-image">
         
         <div class="hero-text">
-            <h1 style="font-size:50px">Blood Bank</h1>
-            <p>aiming to save lives</p>
+            <h1 style="font-size:50px">Welcome, Distributer</h1>
         </div>
     </div>
 
-    <div class="buttons">
-        <a class="button-one" href="Donate.html">Donate now!</a>
-        <a class="button-two" href="ViewDonations.html">view Donations</a>
-        <a class="button-three" href="contactus.html">Contact us</a>
-    </div>
     <div class="middle">
-        <div class="counting-sec">
-            <div class="inner-width">
-                <div class="col">
-                    <img src="usericon.png">
-                    <div id="num1">0</div>
-                    Users
-                </div>
-
-                <div class="col">
-                    <img src="bloodicon.png">
-                    <div id="num2">0</div>
-                    Blood types
-                </div>
-
-                <div class="col">
-                    <img src="blood-donation.png">
-                    <div id="num3">0</div>
-                    completed donation
-                </div>
-
-            </div>
-        </div>
+        <script>
+            var donations = <%- JSON.stringify(data) %>  
+        </script>
+        <%- include('./partials/donationsTable.ejs') %> 
     </div>
 
 </body>
