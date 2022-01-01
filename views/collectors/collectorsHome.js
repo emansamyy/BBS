@@ -1,3 +1,7 @@
+var self = this;
+var requestsList = self.requests;
+console.log(requestsList);
+
 function addAttributes(array) {
     buildTable(array);
 }

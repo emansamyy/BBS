@@ -7,6 +7,11 @@ dotenv.config({path: './config/config.env'});
 const cors = require('cors');
 const bodyParser= require('body-parser');
 const app = express();
+
+//View Engine
+app.set('view engine', 'ejs');
+
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cors());

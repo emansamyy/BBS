@@ -1,14 +1,14 @@
 <div id="id01" class="modal-MA">
     <span onclick="document.getElementById('id01').style.display='none'" class="close-Modal"
         title="Close Modal">&times;</span>
-    <form class="modal-content" method="post" action="editAccounts.php">
+    <form class="modal-content" method="post" action="/collectors">
         <div class="container">
             <h1 id="modalTitle"></h1>
 
             <input type="text" id="idMA" name="id" style="display: none" />
 
             <label for="bloodType">Blood Type</label>
-            <select id="roleMA" name="role" required>
+            <select id="bloodTypeMA" name="bloodType" required>
                 <option value="APositive">A+</option>
                 <option value="ANegative">A-</option>
                 <option value="BPositive">B+</option>
