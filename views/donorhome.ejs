@@ -7,48 +7,64 @@
     </title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src = "../controllers/ManageUsers.js"></script>
+    <script defer src="counter.js"></script>
+
 </head>
 
 <body>
 
     <div class="nav">
         <ul>
-            <li><a href="Home.html">Home </a></li>
-            <li><a href="manageusers.html">Manage Users</a></li>
-           
+            <li><a href="home.html"></a></li>
+            <li><a href="Donate.html">Donate now</a></li>
             <li><a href="ViewDonations.html">View Donations</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
-            <li style="float:right"><a href="login.html">Sign out</a></li>
-
+            <li style="float:right"><a href="signup.html">Sign up</a></li>
+            <li style="float:right"><a class="active" href="login.html">Login</a></li>
         </ul>
     </div>
-    <div class="forms">
-        <div class="formhead">
-            <h2>Delete User</h2>
-        </div>
-        <form method = "POST" class="formstyle" id="deleteUserForm" action= '/deleteuser/{{UserID}}?_method = Delete'>
-            <div class="formcont">
-                <label>ID</label>
-                <input type="text" id="iidd2" name="UserID">
-                <input type = "hidden" name="_method" value = "DELETE">
-            </div>
-            <button type="submit">Delete</button>
-        </form>
-    </div>
-    <a href="contactus.html">
 
-      
+    <a href="contactus.html">
         <button class="contact" type="button">Contact Us Now</button>
     </a>
 
-   
-              
+    <div class="hero-image">
+        
+        <div class="hero-text">
+            <h1 style="font-size:50px">Blood Bank</h1>
+            <p>Donor to save lives</p>
         </div>
     </div>
 
+    <div class="buttons">
+        <a class="button-one" href="Donate.html">Donate now!</a>
+        <a class="button-two" href="ViewDonations.html">view Donations</a>
+        <a class="button-three" href="contactus.html">Contact us</a>
+    </div>
+    <div class="middle">
+        <div class="counting-sec">
+            <div class="inner-width">
+                <div class="col">
+                    <img src="usericon.png">
+                    <div id="num1">0</div>
+                    Users
+                </div>
 
+                <div class="col">
+                    <img src="bloodicon.png">
+                    <div id="num2">0</div>
+                    Blood types
+                </div>
+
+                <div class="col">
+                    <img src="blood-donation.png">
+                    <div id="num3">0</div>
+                    completed donation
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 <footer>

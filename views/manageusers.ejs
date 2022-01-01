@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script src = "../controllers/ManageUsers.js"></script>
+   
+</head>
+
+<body>
+  
+    <div class="nav">
+        <ul>
+            <li><a href="Home.html">Home </a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li style="float:right"><a href="login.html">Sign out</a></li>
+
+        </ul>
+    </div>
+
+    <a href="contactus.html">
+
+      
+        <button class="contact" type="button">Contact Us Now</button>
+    </a>
+
+    <div class="hero-image">
+        <div class="hero-text">
+          
+         
+        <br>
+        <br>
+        <br>
+        <br>
+       
+         <div id ="tbl">
+            <table id= "userss" style = "margin-top: 100px;" >
+
+                 <tr >
+                  <th>ID</th>
+                  <th>User</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                 
+                  
+                </tr>
+              
+              
+                    <%  if (usersarr.length > 0) {  %>
+                    <% usersarr.forEach(userr => { %>
+
+                        <tr>  
+                            <td><%= userr.UserID %></td>
+                            <td><%= userr.UserFirstName  %> </td>
+                            <td><%= userr.Email %> </td>
+                            <td><%= userr.Role %></td>
+
+                         
+                          </tr>
+                          <% }) %>
+                          <% }  %>
+               
+                        
+              
+              
+              </table> 
+            </div>
+              
+                <br>
+                <div style="left: 10px;">
+                <form method="post" action='/deleteuser'>
+              <label> Enter ID to be deleted </label>
+              <input type="text" name="idDel"> </input>
+              <button>Enter </button>
+             </form>
+             </div>
+             <form action="addUser.html" >
+                <input type="submit" value="New User" id="addnUser"/>
+            </form>
+            <form action="/users" method="get">
+
+                <input  type="submit" value="manage users"> 
+                
+                 </form>
+                 <form action="/" method="get">
+    
+                <input id  type="submit" value="view donations"> 
+                
+                 </form>
+        </div>
+    </div>
+
+
+
+</body>
+<footer>
+    <div class="footer-basic">
+        <footer>
+            <hr><br>
+            <div class="social">
+                <a href="https://www.instagram.com" target="_blank"><i class="icon ion-social-instagram" ></i></a>
+                <a href="https://www.snapchat.com" target="_blank"><i class="icon ion-social-snapchat"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="icon ion-social-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="home.html">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <br>
+            <p class="copyright">Blood Bank Inc. © 2021</p>
+        </footer>
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cors());
 
+
 const routes = require('./routes/userroutes');
 const collectorsRoutes = require('./routes/collectorsRoutes');
 mongoose.connect(
@@ -34,7 +35,7 @@ db.once("open", function () {
 
   //  eman188849
 app.get('/' , (req,res) =>{
-res.sendFile(__dirname + '/public/home.html')
+res.sendFile(__dirname + '/public/login.html')
 
 })
 
@@ -48,6 +49,12 @@ app.use("/" , routes);
 app.use('/adduser', routes);
 app.use('/checkuser' , routes);
 app.use('/signup' , routes);
+
+
+
+app.use('/deleteuser' , routes);
+
+app.get("/users" ,routes);
 
 
 // collectors routes
