@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('../views/partials/head.ejs') %>
+
+<body>
+
+    <%- include('../views/partials/nav.ejs') %>
+
+    <a href="contactus.html">
+        <button class="contact" type="button">Contact Us Now</button>
+    </a>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-size:50px">Welcome Admin!</h1>
+            <form action="/users" method="get">
+
+            <input  type="submit" value="manage users"> 
+            
+             </form>
+             <form action="/" method="get">
+
+            <input id  type="submit" value="view donations"> 
+            
+             </form>
+        </div>
+    </div>
+
+
+    <%- include('../views/partials/footer.ejs') %>
+
+</body>
+
+
+</html>
+
+
+</body>
+
+</html>

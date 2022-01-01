@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('../views/partials/head.ejs') %>
+
+<body>
+
+    <%- include('../views/partials/nav.ejs') %>
+
+    <a href="contactus.html">
+        <button class="contact" type="button">Contact Us Now</button>
+    </a>
+
+    <div class="hero-image">
+        
+        <div class="hero-text">
+            <h1 style="font-size:50px">Blood Bank</h1>
+            <p>aiming to save lives</p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <a class="button-one" href="Donate.html">Donate now!</a>
+        <a class="button-two" href="ViewDonations.html">view Donations</a>
+        <a class="button-three" href="contactus.html">Contact us</a>
+    </div>
+    <div class="middle">
+        <div class="counting-sec">
+            <div class="inner-width">
+                <div class="col">
+                    <img src="usericon.png">
+                    <div id="num1">0</div>
+                    Users
+                </div>
+
+                <div class="col">
+                    <img src="bloodicon.png">
+                    <div id="num2">0</div>
+                    Blood types
+                </div>
+
+                <div class="col">
+                    <img src="blood-donation.png">
+                    <div id="num3">0</div>
+                    completed donation
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('../views/partials/footer.ejs') %>
+
+
+
+
+</body>
+
+</html>

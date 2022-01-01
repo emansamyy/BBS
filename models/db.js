@@ -42,3 +42,10 @@ let DistributerSchema = mongoose.Schema({
   phoneNumber: Number,
 });
 let User = (module.exports = mongoose.model("User", UserSchema));
+
+
+
+
+
+
+

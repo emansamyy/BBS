@@ -7,15 +7,19 @@ dotenv.config({path: './config/config.env'});
 const cors = require('cors');
 const bodyParser= require('body-parser');
 const app = express();
+
+//View Engine
+app.set('view engine', 'ejs');
+
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cors());
 app.set('view engine', 'ejs');
 
-const routes = require('./routes/userroutes');
-const oroutes=require('./routes/donationRoutes');
 
 
+const collectorsRoutes = require('./routes/collectorsRoutes');
 mongoose.connect(
  process.env.connectionString,
   {
@@ -31,11 +35,11 @@ db.once("open", function () {
 });
 
   //  eman188849
-
 app.get('/' , (req,res) =>{
-res.sendFile(__dirname + '/public/home.html')
+res.sendFile(__dirname + '/public/login.html')
 
 })
+
 app.use(express.static('public'));
 app.listen(process.env.PORT, () => {
   console.log("Server is running at port 5000");
@@ -54,12 +58,21 @@ app.get("/users" ,routes);
 //omar187463
 
 //app.use("/donation" , oroutes);
-app.use(express.urlencoded({extended:true}));
+
 const donationRouter = require('./routes/donationRoutes');
 app.use(donationRouter);
-app.post('donor',(req,res)=>{
-  console.log(req.body);
-})
 
 
 
+
+
+
+
+
+
+
+// collectors routes
+app.use(collectorsRoutes);
+// distributer routes
+const distributerRoutes = require('./routes/distributerRouter');
+app.use(distributerRoutes);

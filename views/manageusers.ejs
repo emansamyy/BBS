@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../views/partials/head.ejs') %>
+
+<body>
+  
+    <%- include('../views/partials/nav.ejs') %>
+
+    <a href="contactus.html">
+
+      
+        <button class="contact" type="button">Contact Us Now</button>
+    </a>
+
+    <div class="hero-image">
+        <div class="hero-text">
+          
+         
+        <br>
+        <br>
+        <br>
+        <br>
+       
+         <div id ="tbl">
+            <table id= "userss" style = "margin-top: 100px;" >
+
+                 <tr >
+                  <th>ID</th>
+                  <th>User</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                 
+                  
+                </tr>
+              
+              
+                    <%  if (usersarr.length > 0) {  %>
+                    <% usersarr.forEach(userr => { %>
+
+                        <tr>  
+                            <td><%= userr.UserID %></td>
+                            <td><%= userr.UserFirstName  %> </td>
+                            <td><%= userr.Email %> </td>
+                            <td><%= userr.Role %></td>
+
+                         
+                          </tr>
+                          <% }) %>
+                          <% }  %>
+               
+                        
+              
+              
+              </table> 
+            </div>
+              
+                <br>
+                <div style="left: 10px;">
+                <form method="post" action='/deleteuser'>
+              <label> Enter ID to be deleted </label>
+              <input type="text" name="idDel"> </input>
+              <button>Enter </button>
+             </form>
+             </div>
+             <form action="addUser.html" >
+                <input type="submit" value="New User" id="addnUser"/>
+            </form>
+            <form action="/users" method="get">
+
+                <input  type="submit" value="manage users"> 
+                
+                 </form>
+                 <form action="/" method="get">
+    
+                <input id  type="submit" value="view donations"> 
+                
+                 </form>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+
+
+
+<%- include('../views/partials/footer.ejs') %>
+
+
+</body>
+
+</html>

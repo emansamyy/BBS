@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('../views/partials/head.ejs') %>
+<head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    
+    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="../distributer/distributerHome.js"></script>
+
+</head>
+
+<body>
+
+    <%- include('../views/partials/nav.ejs') %>
+    <a href="contactus.html">
+        <button class="contact" type="button">Contact Us Now</button>
+    </a>
+
+    <div class="hero-image">
+        
+        <div class="hero-text">
+            <h1 style="font-size:50px">Welcome, Distributer</h1>
+        </div>
+    </div>
+
+    <div class="middle">
+        <script>
+            var donations = <%- JSON.stringify(data) %>  
+        </script>
+        <%- include('./partials/donationsTable.ejs') %> 
+    </div>
+
+</body>
+<%- include('../views/partials/footer.ejs') %>
+
+
+
+
+</body>
+
+</html>

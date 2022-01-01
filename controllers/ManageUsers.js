@@ -21,14 +21,11 @@ const usersarr =[
   { UserID: 311,Role: "collector", UserFirstName: "Katy",UserSecondName: "Milad", Email: "KatyMilad@yahoo.com", password: "1234",phoneNumber: 0123225304},
 
 
- ];
+ ];`1`
 const getUsers = (req,res) =>{
   res.render('manageusers' , {usersarr});
   
   };
-
-
-//manageuser esm el ejs
 
 const addUser = (req, res) => {
   var user = new users({
@@ -67,26 +64,16 @@ const checkuser = (req, res) => {
   user.select("Role").exec(function (err, user) {
     if (err) return handleError(err);
     if (user.Role == "admin") {
-      res.sendFile("adminhome.html", {
-        root: Path.join(__dirname, "../public"),
-      });
+      res.render("adminhome");
     } else if (user.Role == "donor") {
-      res.sendFile("donorhome.html", {
-        root: Path.join(__dirname, "../public"),
-      });
+      res.render("donorhome")
     } else if (user.Role == "collector") {
-      res.sendFile("collectorhome.html", {
-        root: Path.join(__dirname, "../public"),
-      });
+      res.render("collectorhome");
     } else if (user.Role == "distributer") {
-      res.sendFile("distributerhome.html", {
-        root: Path.join(__dirname, "../public"),
-      });
+      res.render("distributerhome");
     }
     else if (user.Role == "Individual") {
-      res.sendFile("home.html", {
-        root: Path.join(__dirname, "../public"),
-      });
+      res.render("home");
     }
     else {
       console.log("user not found");
@@ -127,7 +114,7 @@ const deleteuser = ((req, res) => {
 module.exports = {
   addUser,
   checkuser,
-  signup, 
+  signup,
   deleteuser,
   getUsers
   
